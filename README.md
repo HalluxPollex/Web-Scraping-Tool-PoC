@@ -58,7 +58,19 @@ pip install beautifulsoup4
 
 3. Add your proxy provider (sticky or rotating proxies) to proxy_session_manager.py. For this project I use DECODO residential proxies.
 
-This runs the script using the default number of workers (10) threads and (3) emails processed per one proxy session (One GET and 3xPOST).
+4. Generate random emails, and maybe add some real ones to the generated text.
+
+```bash
+python3 generateEmails.py
+```
+
+5. Run the proxy module test to check your proxy rotates. (Returns new IP for every request).
+
+```bash
+python3 tests/test_session_manager.py
+```
+   
+6. Run the script using the default number of workers (10) threads and (3) emails processed per one proxy session (One GET and 3xPOST).
 **(NOT RECOMMENDED — TOO SLOW)**
 
 ```bash
