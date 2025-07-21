@@ -58,7 +58,13 @@ pip install beautifulsoup4
 
 3. Add your proxy provider (sticky or rotating proxies) to proxy_session_manager.py. For this project I use DECODO residential proxies.
 
-4. Generate random emails, and maybe add some real ones to the generated text.
+<pre>
+  # Credentials for authenticated proxy access via Decodo
+        username = 'user-username-sessionduration-1'
+        password = 'password'
+</pre>
+
+5. Generate random emails, and maybe add some real ones to the generated emails .txt file.
 
 ```bash
 python3 generateEmails.py
