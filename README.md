@@ -51,7 +51,11 @@ Note: If a session is reused more than ~130 times, the IP tends to hit rate limi
 
 1. Clone or download this project.
    
-3. Install dependencies. Most are standard Python packages, except for Beautiful Soup, which you can install with:
+```bash
+git clone https://github.com/HalluxPollex/Web-Scraping-Tool-PoC.git
+```
+   
+2. Install dependencies. Most are standard Python packages, except for Beautiful Soup, which you can install with:
 ```bash
 pip install beautifulsoup4
 ```
@@ -64,20 +68,20 @@ pip install beautifulsoup4
         password = 'password'
 </pre>
 
+4. Run the proxy module test to check your proxy rotates. (Returns new IP for every request).
+
+```bash
+python3 tests/test_session_manager.py
+```
+
 5. Generate random emails, and maybe add some real ones to the generated emails .txt file.
 
 ```bash
 python3 generateEmails.py
 ```
-
-5. Run the proxy module test to check your proxy rotates. (Returns new IP for every request).
-
-```bash
-python3 tests/test_session_manager.py
-```
    
-6. Run the script using the default number of workers (10) threads and (3) emails processed per one proxy session (One GET and 3xPOST).
-**(NOT RECOMMENDED — TOO SLOW)**
+To run the script using the default number of workers (10) threads and (3) emails processed per one proxy session (One GET and 3xPOST).
+**(NOT RECOMMENDED — SLOW)**
 
 ```bash
 python3 run.py 5k_random_emails.txt
